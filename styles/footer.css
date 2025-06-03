@@ -1,0 +1,21 @@
+.footer {
+	background-color: #f33534;
+	color: white;
+	font-size: 2rem;
+	text-align: start;
+	padding-top: 2rem;
+	position: relative;
+	z-index: 1;
+	font-family: 'Patrick Hand', cursive;
+}
+
+/* Footer content is above the spikes */
+.footer-content {
+	position: relative;
+}
+
+.footer-content p {
+	margin: 0.5rem 0;
+	margin-left: 2rem;
+	padding-bottom: 2rem;
+}

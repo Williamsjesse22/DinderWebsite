@@ -1,0 +1,47 @@
+
+.value-props-heading {
+    display: flex;
+    font-size: 4rem;
+    justify-content: center;
+    padding: 2rem;
+    font-family: 'Patrick Hand', cursive;
+    text-align: left;
+}
+
+.info-block {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.info-section {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}
+
+.value-props img {
+    display: flex;
+    max-width: 25%;
+    max-height: auto;
+    align-self: center;
+    margin: -2rem;
+}
+
+.info-heading {
+    display: flex;
+    justify-content: center;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 2.5rem;
+    padding-left: 2rem;
+    justify-content: center;
+}
+
+.info-description {
+    display: flex;
+    justify-content: center;
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2rem;
+}

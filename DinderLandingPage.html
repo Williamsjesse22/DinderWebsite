@@ -1,10 +1,134 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8" />
-    <title>Dinder Landing Page</title>
-</head>
-<body>
-    <h1>Welcome to Dinder!</h1>
-</body>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Dinder Landing Page</title>
+		<link rel="stylesheet" href="styles/navbar.css" />
+		<link rel="stylesheet" href="styles/landing.css" />
+		<link rel="stylesheet" href="styles/global.css" />
+		<link rel="stylesheet" href="styles/footer.css" />
+		<link rel="stylesheet" href="styles/info-section.css" />
+		<link rel="stylesheet" href="styles/infographic.css" />
+	</head>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
+		rel="stylesheet" />
+		<link
+		href="https://fonts.googleapis.com/css2?family=Handlee&display=swap"
+		rel="stylesheet" />
+	<body>
+		<header class="navbar">
+			<nav class="nav-wrapper">
+				<section class="logo-section">
+					<div class="logo">
+						<img src="images/DinderLogo160.png" alt="Dinder Logo" />
+					</div>
+					<div class="nav-title">
+						<span>Dinder</span>
+					</div>
+				</section>
+				<ul class="nav-links">
+					<li><a href="DinderLandingPage.html">Home</a></li>
+					<li>
+						<a href="MeetTheDeveloper.html">Meet the Developer</a>
+					</li>
+				</ul>
+			</nav>
+			<div id="spikeRow"></div>
+		</header>
+
+		<div class="page-wrapper">
+			<main class="landing-main">
+				<div class="splineWrapper">
+					<div class="spline" id="splineContainer"></div>
+				</div>
+				<div class="everythingElse">
+					<div class="DinderDecriptor">
+						<h1 class="hero-text">
+							The End of Dinner Debates.
+						</h1>
+						<h1 class="hero-subtext">
+							Just Swipe & Dine.
+						</h1>
+						<section class="Dinder-info-section">
+							<h2>
+								Dinder is a revolutionary app that simplifies dining decisions by combining dietary accommodations and preferences into a single, easy-to-use platform. 
+							</h2>
+							<h2 class="sub-descriptor-text">
+								Whether you're gluten-free, vegan, or just want to try something new, Dinder helps you find the perfect restaurant for you and your friends.
+							</h2>
+						</section>
+						<div class="cta-button-wrapper">
+							<button
+								class="LearnMore-Button"
+								onclick="scrollToLearnMore()">
+								Learn More
+							</button>
+							<a
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfYV5lRRBO0I5ALuMeqO7NnbGWZWc5HbF0yHulFpeMY7PIQ7Q/viewform?usp=dialog"
+								target="_blank"
+								rel="noopener noreferrer">
+								<button class="CalltoAction-Button">
+									Join Beta-Testing
+								</button>
+							</a>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+		<section id="learn-more-target">
+			<div id="info-container"></div>
+			<script>
+				fetch('components/ValueProps.html')
+					.then((res) => res.text())
+					.then((html) => {
+						document.getElementById('info-container').innerHTML =
+							html;
+					});
+			</script>
+			<div id="infographic"></div>
+			<script>
+				fetch('components/infographic.html')
+					.then((res) => res.text())
+					.then((html) => {
+						document.getElementById('infographic').innerHTML = html;
+
+						const script = document.createElement('script');
+						script.src = 'scripts/imageCycler.js';
+						script.type = 'module';
+						document.body.appendChild(script);
+					});
+			</script>
+		</section>
+		<div class="closer">
+			<p class="closing-header">Excited? Me too!</p>
+			<p class="closing-body">Join beta Testing to be among the first users!</p>
+			<a
+				href="https://docs.google.com/forms/d/e/1FAIpQLSfYV5lRRBO0I5ALuMeqO7NnbGWZWc5HbF0yHulFpeMY7PIQ7Q/viewform?usp=dialog"
+				target="_blank"
+				rel="noopener noreferrer">
+				<button class="CalltoAction-Button">
+					Join Beta-Testing
+				</button>
+			</a>
+		</div>
+		<script>
+			function scrollToLearnMore() {
+				const target = document.getElementById('learn-more-target');
+				if (target) {
+					target.scrollIntoView({ behavior: 'smooth' });
+				}
+			}
+		</script>
+
+		<div id="spikeBottom"></div>
+		<footer class="footer">
+			<div class="footer-content">
+				<p>&copy; 2023 Dinder. All rights reserved.</p>
+			</div>
+		</footer>
+		<script src="spikes.js"></script>
+		<script type="module" src="scripts/splineLoader.js"></script>
+	</body>
 </html>

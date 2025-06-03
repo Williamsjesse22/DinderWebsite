@@ -1,0 +1,43 @@
+body, main {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Handlee', cursive;
+}
+
+.nav-title-MTD {
+	color: white;
+}
+
+.MTD-info {
+    display: flex;
+    align-items: start;
+    padding: 2rem;
+    text-align: end ;
+}
+
+.developer-name{
+    font-size: 6rem;
+    font-family: 'Patrick Hand', cursive;
+    margin: -0.5rem;
+    padding-left: 2rem;
+    text-align: left;
+}
+
+.developer-description{
+    font-size: 1.93rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: left;
+}
+
+.developer-image{
+    display: flex;
+    max-width: 35%;
+    height: auto;
+    border-radius: 3rem;
+    padding: 2rem;
+}

@@ -1,0 +1,24 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	overflow-x: hidden;
+	font-family: 'Handlee', cursive;
+}
+
+.page-wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	flex: 1;
+}
+
+.footer {
+	background-color: #f33534;
+	text-align: center;
+	padding: 1rem;
+}
