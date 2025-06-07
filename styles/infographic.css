@@ -49,9 +49,7 @@
 }
 
 .title-box {
-    padding-top: 2rem;
-	margin-bottom: -3rem; 
-    display: flex;
+	margin-bottom: -1rem; 
     font-size: 4rem;
     color: #000000;
 	font-family: 'Patrick Hand', cursive;
@@ -60,14 +58,13 @@
 
 .description-box {
     display: flex;
-    align-items: center;
     width: 100%;
     height: 57.5%;
 	font-size: 1.93rem;
 	line-height: 1.6;
 	color: #FFFFFF;
     background-color: #f33534;
-	border-radius: 3rem;
+	border-radius: 2rem;
 	padding: 2rem;
 }
 
@@ -85,3 +82,16 @@
 }
 
 
+@media screen and (max-width: 768px) {
+.title-box {
+	font-size: 1.5rem;
+}
+.description-box {
+	font-size: 0.7rem;
+	height: 100%;
+}
+.screen-content {
+	border-radius: 1.4rem;
+	/* width: 90%; */
+}
+}

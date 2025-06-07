@@ -4,7 +4,7 @@ const container = document.getElementById('splineContainer');
 const desktopSplineURL =
 	'https://prod.spline.design/rvdCHiFk4mrCLsU8/scene.splinecode';
 const mobileSplineURL =
-	'https://prod.spline.design/rvdCHiFk4mrCLsU8/scene.splinecode';
+	'https://prod.spline.design/2D7xWdVBl6vd6Ff7/scene.splinecode';
 
 let currentMode = null;
 let isViewerLoaded = false;

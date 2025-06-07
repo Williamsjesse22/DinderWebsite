@@ -22,3 +22,7 @@ main {
 	text-align: center;
 	padding: 1rem;
 }
+
+@media screen and (max-width: 768px) {
+	/* Universal downscale for text-heavy elements */
+}

@@ -112,3 +112,42 @@
 	font-size: 1.93rem;
 	font-family: 'Handlee', cursive;
 }
+
+
+@media screen and (max-width: 768px) {
+.splineWrapper {
+	transform: translateX(-2.5em); 
+}
+.hero-text {
+	margin-top: 2rem;
+	font-size: 2rem;
+}
+
+.hero-subtext {
+	font-size: 2rem;
+	margin-top: -1rem;
+}
+
+.Dinder-info-section {
+	margin-top: 1rem;
+	font-size: 0.8rem;
+}
+
+.Dinder-info-section h2 {
+	padding: 0.75rem 0;
+}
+
+.cta-button-wrapper {
+	gap: 2.5rem;
+}
+
+.CalltoAction-Button{
+	border-radius: 1.5rem;
+	font-size: 1rem;
+}
+
+.LearnMore-Button {
+	border-radius: 1.5rem;
+	font-size: 0.8rem;
+}
+}

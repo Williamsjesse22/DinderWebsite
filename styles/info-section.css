@@ -30,10 +30,8 @@
 
 .info-heading {
     display: flex;
-    justify-content: center;
     font-family: 'Patrick Hand', cursive;
     font-size: 2.5rem;
-    padding-left: 2rem;
     justify-content: center;
 }
 
@@ -44,4 +42,24 @@
     margin-left: auto;
     margin-right: auto;
     font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+.value-props-heading {
+    font-size: 2.5rem;
+    padding: 1rem;
+    margin-top: -8rem;
+}
+.value-props img {
+    max-width: 35%;
+}
+.info-heading {
+    display: flex;
+    font-size: 1.75rem;
+}
+.info-description {
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
 }
