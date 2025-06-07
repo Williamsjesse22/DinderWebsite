@@ -115,22 +115,28 @@
 
 
 @media screen and (max-width: 768px) {
+.everythingElse {
+	
+}
 .splineWrapper {
-	transform: translateX(-2.5em); 
+	transform: translateX(0em); 
 }
 .hero-text {
 	margin-top: 2rem;
-	font-size: 2rem;
+	transform: translateX(2rem);
+	font-size: 1.25rem;
 }
 
 .hero-subtext {
-	font-size: 2rem;
+	font-size: 1.25rem;
 	margin-top: -1rem;
+	transform: translateX(2rem);
 }
 
-.Dinder-info-section {
+.Dinder-info-section{
 	margin-top: 1rem;
-	font-size: 0.8rem;
+	font-size: 0.5rem;
+	transform: translateX(2rem);
 }
 
 .Dinder-info-section h2 {
@@ -138,16 +144,23 @@
 }
 
 .cta-button-wrapper {
-	gap: 2.5rem;
+	gap: 2rem;
 }
 
 .CalltoAction-Button{
-	border-radius: 1.5rem;
-	font-size: 1rem;
+	border-radius: 1rem;
+	font-size: 0.5rem;
 }
 
 .LearnMore-Button {
-	border-radius: 1.5rem;
-	font-size: 0.8rem;
+	border-radius: 1rem;
+	font-size: 0.5rem;
+}
+
+.closing-header {
+	font-size: 1.5rem;
+}
+.closing-body  {
+	font-size: 0.75rem;
 }
 }
