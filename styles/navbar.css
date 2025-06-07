@@ -22,6 +22,25 @@
 	color: white;
 }
 
+.logo img {
+	height: 60px;
+	width: auto;
+	display: block;
+	margin-left: 0.5rem;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.logo-section {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
 #spikeRow,
 #spikeBottom {
 	display: flex;
@@ -52,18 +71,6 @@
 	background-color: #f33534;
 }
 
-.logo img {
-	height: 60px;
-	width: auto;
-	display: block;
-	margin-left: 0.5rem;
-}
-
-.logo {
-	display: flex;
-	align-items: center;
-	gap: 2rem;
-}
 
 .nav-links {
 	min-width: 92%;
@@ -74,20 +81,13 @@
 	color: white;
 }
 
-.logo-section {
-	display: flex;
-	align-items: center;
-	gap: 0.5rem;
-}
-
-.nav-title span {
-	display: inline-block;
-	transform: translateX(3.5rem);
-}
-
 @media screen and (max-width: 768px) {
+	.logo img {
+		height: 50px;
+		width: auto;
+	}
 	.navbar {
-		font-size: 1.5rem;
+		font-size: 1rem;
 	}
 	#spikeBottom svg {
 		display: flex;

@@ -6,10 +6,6 @@ body, main {
     font-family: 'Handlee', cursive;
 }
 
-.nav-title-MTD {
-	color: white;
-}
-
 .MTD-info {
     display: flex;
     align-items: start;

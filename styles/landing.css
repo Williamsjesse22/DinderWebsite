@@ -1,7 +1,5 @@
 .landing-main {
 	padding: 4rem 2rem;
-	position: relative;
-	justify-content: space-between;
 	display: flex;
 	font-family: 'Handlee', cursive;
 }
@@ -29,13 +27,6 @@
 	text-align: left;
 }
 
-.Dinder-info-section {
-	font-size: 1.93rem;
-	color: #000000;
-	margin-top: -2rem;
-	font-family: 'Handlee';
-}
-
 .hero-text {
 	font-size: 5rem;
 	color: #000000;
@@ -49,6 +40,13 @@
 	margin-top: -4rem
 }
 
+.Dinder-info-section {
+	font-size: 1.93rem;
+	color: #000000;
+	margin-top: -2rem;
+	font-family: 'Handlee';
+}
+
 .sub-descriptor-text{
 	margin-top: -2rem;
 }
@@ -58,7 +56,6 @@
 	gap: 5rem;
 	justify-content: left;
 }
-
 
 .CalltoAction-Button {
 	background-color: #f33534;
@@ -81,11 +78,6 @@
 	font-weight: bold;
 	font-family: 'Patrick Hand', cursive;
 	cursor: pointer;
-}
-
-.logo {
-	width: 1rem;
-	height: 1rem;
 }
 
 .bottom-page-text {
@@ -115,27 +107,24 @@
 
 
 @media screen and (max-width: 768px) {
-.everythingElse {
-	
-}
 .splineWrapper {
 	transform: translateX(0em); 
 }
 .hero-text {
 	margin-top: 2rem;
 	transform: translateX(2rem);
-	font-size: 1.25rem;
+	font-size: 1.5rem;
 }
 
 .hero-subtext {
-	font-size: 1.25rem;
+	font-size: 1.5rem;
 	margin-top: -1rem;
 	transform: translateX(2rem);
 }
 
 .Dinder-info-section{
 	margin-top: 1rem;
-	font-size: 0.5rem;
+	font-size: 0.6rem;
 	transform: translateX(2rem);
 }
 
@@ -149,12 +138,12 @@
 
 .CalltoAction-Button{
 	border-radius: 1rem;
-	font-size: 0.5rem;
+	font-size: 0.75rem;
 }
 
 .LearnMore-Button {
 	border-radius: 1rem;
-	font-size: 0.5rem;
+	font-size: 0.75rem;
 }
 
 .closing-header {
