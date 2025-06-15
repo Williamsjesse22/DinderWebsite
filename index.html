@@ -162,7 +162,7 @@
 				.addEventListener('submit', async function (e) {
 					e.preventDefault();
 					const email = document.getElementById('userEmail').value;
-
+					const submitButton = document.querySelector('.modal-submit');
 					try {
 						const res = await fetch(
 							'https://script.google.com/macros/s/AKfycbz5uq_KJfaeOWfKmZ4FzZXESujNSPh8ABO7jq0Hxght74bK2LADIkmmt0zhC3PsYUa4/exec',
