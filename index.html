@@ -165,46 +165,41 @@
 					const submitButton =
 						document.querySelector('.modal-submit');
 
-					// Use FormData instead of JSON to bypass CORS preflight
-					const formData = new FormData();
-					formData.append('email', email);
-
 					try {
 						const res = await fetch(
 							'https://script.google.com/macros/s/AKfycbz5uq_KJfaeOWfKmZ4FzZXESujNSPh8ABO7jq0Hxght74bK2LADIkmmt0zhC3PsYUa4/exec',
 							{
 								method: 'POST',
-								body: formData, // ✅ NOT JSON
+								body: JSON.stringify({ email }),
+								headers: {
+									'Content-Type': 'application/json',
+								},
 							}
 						);
 
 						if (res.ok) {
 							submitButton.textContent = 'Thanks!';
-							submitButton.disabled = true;
-							submitButton.style.backgroundColor = '#28a745';
-
-							setTimeout(() => {
-								document.getElementById(
-									'emailModal'
-								).style.display = 'none';
-								document.body.classList.remove('modal-open');
-								submitButton.textContent = 'Submit';
-								submitButton.disabled = false;
-								submitButton.style.backgroundColor = '';
-								document.getElementById('emailForm').reset();
-							}, 1000);
+							submitButton.style.backgroundColor = '#28a745'; // green
 						} else {
 							submitButton.textContent = 'Error occurred';
-							submitButton.style.backgroundColor = '#f33534';
-							console.error(
-								'Submission error:',
-								await res.text()
-							);
+							submitButton.style.backgroundColor = '#f33534'; // red
 						}
 					} catch (error) {
 						submitButton.textContent = 'Error occurred';
 						submitButton.style.backgroundColor = '#f33534';
 						console.error('Network error:', error);
+					} finally {
+						// Close modal after delay regardless of result
+						setTimeout(() => {
+							document.getElementById(
+								'emailModal'
+							).style.display = 'none';
+							document.body.classList.remove('modal-open');
+							submitButton.textContent = 'Submit';
+							submitButton.disabled = false;
+							submitButton.style.backgroundColor = '';
+							document.getElementById('emailForm').reset();
+						}, 1000);
 					}
 				});
 		</script>
