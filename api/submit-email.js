@@ -10,7 +10,7 @@ export default async function handler(req, res) {
 		}
 
 		try {
-			const filePath = path.resolve('./emails/list.csv');
+			const filePath = path.resolve('../emails/list.csv');
 			const line = `${email.trim()}\n`;
 			fs.appendFileSync(filePath, line, 'utf8');
 
