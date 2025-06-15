@@ -132,5 +132,80 @@
 		</footer>
 		<script src="spikes.js"></script>
 		<script type="module" src="scripts/splineLoader.js"></script>
+
+		<div id="emailModal" class="modal-overlay">
+			<div class="modal-content">
+				<h2>Join Beta Testing!</h2>
+				<p>
+					Enter your email to be included in the exclusive Dinder beta
+					test!
+				</p>
+				<form id="emailForm">
+					<input
+						type="email"
+						id="userEmail"
+						name="email"
+						placeholder="you@example.com"
+						required />
+					<button type="submit" class="modal-submit">Submit</button>
+				</form>
+			</div>
+		</div>
+		<script>
+			window.addEventListener('load', () => {
+				document.body.classList.add('modal-open');
+				document.getElementById('emailModal').style.display = 'flex';
+			});
+
+			document
+				.getElementById('emailForm')
+				.addEventListener('submit', async function (e) {
+					e.preventDefault();
+					const email = document.getElementById('userEmail').value;
+
+					try {
+						const res = await fetch(
+							'https://script.google.com/macros/s/AKfycbz5uq_KJfaeOWfKmZ4FzZXESujNSPh8ABO7jq0Hxght74bK2LADIkmmt0zhC3PsYUa4/exec',
+							{
+								method: 'POST',
+								body: JSON.stringify({ email }),
+								headers: {
+									'Content-Type': 'application/json',
+								},
+							}
+						);
+
+						if (res.ok) {
+							// Animate button to say “Thanks!”
+							submitButton.textContent = 'Thanks!';
+							submitButton.disabled = true;
+							submitButton.style.backgroundColor = '#28a745'; // optional: green flash
+
+							// Wait 1 second, then close modal
+							setTimeout(() => {
+								document.getElementById(
+									'emailModal'
+								).style.display = 'none';
+								document.body.classList.remove('modal-open');
+								submitButton.textContent = 'Submit'; // reset for future visits
+								submitButton.disabled = false;
+								submitButton.style.backgroundColor = ''; // reset style
+								document.getElementById('emailForm').reset(); // clear input
+							}, 1000);
+						} else {
+							submitButton.textContent = 'Error occurred';
+							submitButton.style.backgroundColor = '#f33534'; // red
+							console.error(
+								'Submission error:',
+								await res.text()
+							);
+						}
+					} catch (error) {
+						submitButton.textContent = 'Error occurred';
+						submitButton.style.backgroundColor = '#f33534'; // red
+						console.error('Network error:', error);
+					}
+				});
+		</script>
 	</body>
 </html>
