@@ -164,38 +164,38 @@
 					const email = document.getElementById('userEmail').value;
 					const submitButton =
 						document.querySelector('.modal-submit');
-					try {
-						const formData = new FormData();
-						formData.append('email', email);
 
+					// Use FormData instead of JSON to bypass CORS preflight
+					const formData = new FormData();
+					formData.append('email', email);
+
+					try {
 						const res = await fetch(
 							'https://script.google.com/macros/s/AKfycbz5uq_KJfaeOWfKmZ4FzZXESujNSPh8ABO7jq0Hxght74bK2LADIkmmt0zhC3PsYUa4/exec',
 							{
 								method: 'POST',
-								body: formData,
+								body: formData, // ✅ NOT JSON
 							}
 						);
 
 						if (res.ok) {
-							// Animate button to say “Thanks!”
 							submitButton.textContent = 'Thanks!';
 							submitButton.disabled = true;
-							submitButton.style.backgroundColor = '#28a745'; // optional: green flash
+							submitButton.style.backgroundColor = '#28a745';
 
-							// Wait 1 second, then close modal
 							setTimeout(() => {
 								document.getElementById(
 									'emailModal'
 								).style.display = 'none';
 								document.body.classList.remove('modal-open');
-								submitButton.textContent = 'Submit'; // reset for future visits
+								submitButton.textContent = 'Submit';
 								submitButton.disabled = false;
-								submitButton.style.backgroundColor = ''; // reset style
-								document.getElementById('emailForm').reset(); // clear input
+								submitButton.style.backgroundColor = '';
+								document.getElementById('emailForm').reset();
 							}, 1000);
 						} else {
 							submitButton.textContent = 'Error occurred';
-							submitButton.style.backgroundColor = '#f33534'; // red
+							submitButton.style.backgroundColor = '#f33534';
 							console.error(
 								'Submission error:',
 								await res.text()
@@ -203,7 +203,7 @@
 						}
 					} catch (error) {
 						submitButton.textContent = 'Error occurred';
-						submitButton.style.backgroundColor = '#f33534'; // red
+						submitButton.style.backgroundColor = '#f33534';
 						console.error('Network error:', error);
 					}
 				});
