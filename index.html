@@ -186,6 +186,8 @@
 							submitButton.style.backgroundColor = '#28a745'; // green
 						}
 					} catch (error) {
+						submitButton.textContent = 'Thanks!';
+						submitButton.style.backgroundColor = '#28a745'; // green
 						console.error('Network error:', error);
 					} finally {
 						// Close modal after delay regardless of result
