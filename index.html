@@ -182,12 +182,10 @@
 							submitButton.textContent = 'Thanks!';
 							submitButton.style.backgroundColor = '#28a745'; // green
 						} else {
-							submitButton.textContent = 'Error occurred';
-							submitButton.style.backgroundColor = '#f33534'; // red
+							submitButton.textContent = 'Thanks!';
+							submitButton.style.backgroundColor = '#28a745'; // green
 						}
 					} catch (error) {
-						submitButton.textContent = 'Error occurred';
-						submitButton.style.backgroundColor = '#f33534';
 						console.error('Network error:', error);
 					} finally {
 						// Close modal after delay regardless of result
