@@ -161,70 +161,66 @@ body.modal-open {
 
 @media screen and (max-width: 768px) {
 	.landing-main {
-		display: flex;
-		flex-direction: column;
 		align-items: center;
 		text-align: center;
 		padding: 2rem;
 	}
 
 	.everythingElse {
-		display: flex;
-		flex-direction: column;
 		align-items: center;
-		width: 100%;
 	}
 
 	.DinderDecriptor {
-		display: flex;
-		flex-direction: column;
+		padding: 1rem;
 		align-items: center;
 		gap: 1.5rem;
-		width: 100%;
 	}
 
 	.splineWrapper {
-		order: 1;
+		/* order: 1;
 		width: 100%;
 		display: flex;
 		justify-content: center;
-		margin: 1rem 0;
+		align-items: center;
+		margin: 1rem 0; */
+		display: none;
 	}
 
 	.Dinder-info-section {
 		order: 3;
-		width: 90%;
 	}
 
 	.cta-button-wrapper {
+		padding: 2rem;
 		order: 4;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 1rem;
 		width: 100%;
+		margin-bottom: 5rem;
 	}
 
 	.hero-text,
 	.hero-subtext {
-		font-size: 2rem;
-		width: 90%;
+		text-align: center;
+		width: 100%;
 	}
 	.hero-text {
-		/* margin-top: -10rem; */
-		transform: translateX(2rem);
 		font-size: 1.5rem;
+		margin-top: 2rem;
+		transform: translateX(2rem);
 	}
 
 	.hero-subtext {
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 		margin-top: -1rem;
-		/* transform: translateX(2rem); */
+		transform: translateX(2rem);
 	}
 
 	.Dinder-info-section {
+		text-align: center;
 		margin-top: 1rem;
-		font-size: 0.6rem;
+		font-size: 0.75rem;
 		transform: translateX(2rem);
 	}
 
